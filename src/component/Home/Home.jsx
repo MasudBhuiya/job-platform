@@ -1,7 +1,10 @@
 import React from 'react';
 import Category from '../CategoryList/Category';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+    const data = useLoaderData() 
+    // console.log(data)
     return (
         <div className='container mx-auto mt-10'>
             <div className='grid md:grid-cols-2 bg-slate-100 gap-3 p-4 rounded'>
@@ -12,7 +15,7 @@ const Home = () => {
                     <button className='bg-indigo-400 p-2 rounded text-white font-medium'>Get Started</button>
                 </div>
             </div>
-            <Category></Category>
+            <Category data={data}></Category>
         </div>
     );
 };
