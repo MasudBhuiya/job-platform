@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Category = ({ singleData }) => {
-    console.log(singleData)
+    // console.log(singleData)
     return (
         <div>
             <div className='bg-indigo-50 m-3 p-4 rounded h-46'>
