@@ -3,10 +3,18 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import SingleDetail from '../SingleDetail/SingleDetail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign, faDollar } from '@fortawesome/free-solid-svg-icons'
+import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 
 const JobDetail = () => {
     const [detail, setDetail] = useState({})
+    const [cart, setCart] = useState([])
     const params = useParams()
+
+    const handleAddToCart = (id) =>{
+        const addCart = addToDb(id);
+        setCart(addCart);
+    }
+
     const id = params.detailId;
     // console.log(id)
     const loader = useLoaderData();
@@ -42,9 +50,8 @@ const JobDetail = () => {
                 <p className='mt-2'><span className='font-bold'>Email:</span> {detail.email}</p>
                 <p className='mt-2'><span className='font-bold'>Address:</span> {detail.address}</p>
             </div>
-            <button className='bg-indigo-400 text-white font-bold w-96 mt-6 p-2 rounded-lg'>button</button>
+            <button className='bg-indigo-400 text-white font-bold w-96 mt-6 p-2 rounded-lg' onClick={()=>handleAddToCart(detail.id)}>Apply Now</button>
             </div>
-            
         </div>
     );
 };
