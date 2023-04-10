@@ -11,6 +11,8 @@ import Home from './component/Home/Home';
 import JobDetail from './component/JobDetail/JobDetail';
 import AppliedJobs from './component/AppliedJobs/AppliedJobs';
 import cartProductsLoader from './loaders/cartProductsList';
+import Statistics from './component/Statistics/Statistics';
+import NoDataFound from './component/NoDataFound/NoDataFound';
 
 const router = createBrowserRouter([
   {
@@ -20,17 +22,25 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('data.json')
+        loader: () => fetch('/data.json')
       },
       {
         path: '/detail/:detailId',
         element: <JobDetail></JobDetail>,
-        loader: () => fetch('data.json')
+        loader: () => fetch('/data.json')
       },
       {
         path: '/applied',
         element: <AppliedJobs></AppliedJobs>,
         loader: cartProductsLoader
+      },
+      {
+        path: '/statistics',
+        element: <Statistics></Statistics>
+      },
+      {
+        path: '*',
+        element: <NoDataFound></NoDataFound>
       }
     ]
   },

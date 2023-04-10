@@ -8,7 +8,7 @@ const FeaturedJobs = ({data}) => {
             <p className='text-center mb-9'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className='grid md:grid-cols-2 gap-6'>
             {
-                data.slice(0, 4).map(singleData => <SingleData  key={singleData.id} singleData={singleData}></SingleData>)
+                 data&& data.slice(0, 4).map(singleData => <SingleData  key={singleData.id} singleData={singleData}></SingleData>)
             }
             </div>
             <div className='flex items-center justify-center mt-6 '>

@@ -47,7 +47,7 @@ const JobDetail = () => {
                 <h2 className='font-bold text-lg mb-3'>Contact Information</h2>
                 <hr/>
                 <p className='mt-3'><span className='font-bold '>Phone:</span> {detail.phone}</p>
-                <p className='mt-2'><span className='font-bold'>Email:</span> {detail.email}</p>
+                <p className='mt-2'><span className='font-bold'>Email;</span> {detail.email}</p>
                 <p className='mt-2'><span className='font-bold'>Address:</span> {detail.address}</p>
             </div>
             <button className='bg-indigo-400 text-white font-bold w-96 mt-6 p-2 rounded-lg' onClick={()=>handleAddToCart(detail.id)}>Apply Now</button>

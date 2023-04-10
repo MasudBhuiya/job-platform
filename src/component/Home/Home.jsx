@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Category from '../CategoryList/Category';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import FeaturedJobs from '../FeaturesJobs/FeaturedJobs';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
         fetch('category.json')
         .then(res => res.json())
         .then(data => setCategory(data))
-    },[])
+    },[data])
     return (
         <div className='container mx-auto mt-10'>
             <div className='grid md:grid-cols-2 bg-slate-100 gap-3 p-4 rounded'>
