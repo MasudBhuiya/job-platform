@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Category from '../CategoryList/Category';
 import { useLoaderData } from 'react-router-dom';
+import FeaturedJobs from '../FeaturesJobs/FeaturedJobs';
 
 const Home = () => {
     const data = useLoaderData() 
+    const [category, setCategory] = useState([]);
+    useEffect(()=>{
+        fetch('category.json')
+        .then(res => res.json())
+        .then(data => setCategory(data))
+    },[])
+
     // console.log(data)
     return (
         <div className='container mx-auto mt-10'>
@@ -15,7 +23,14 @@ const Home = () => {
                     <button className='bg-indigo-400 p-2 rounded text-white font-medium'>Get Started</button>
                 </div>
             </div>
-            <Category data={data}></Category>
+            <h2 className='font-bold text-3xl text-center mt-10'>Job Category List</h2>
+            <p className='text-center mt-2'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <div className='grid md:grid-cols-4 mt-9'>
+            {
+                category.map(singleData => <Category singleData={singleData} key={singleData.id}></Category>)
+            }
+            </div>
+            <FeaturedJobs data={data}></FeaturedJobs>
         </div>
     );
 };

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "icon": "https://as1.ftcdn.net/v2/jpg/05/64/25/64/1000_F_564256468_VD7y7vLEYsOLkBcdLpCniRsKX9RHFP5Z.jpg",
+        "name": "Fontent developer",
+        "abailable": "170 Jobs Available"
+    },
+    {
+        "id": 2,
+        "icon": "https://t4.ftcdn.net/jpg/05/71/70/43/240_F_571704347_9NmIjuIAL8DwLkXjFjXJRBv642ZOMGoV.jpg",
+        "name": "Creative Design",
+        "abailable": "100+ Jobs Available"
+    },
+    {
+        "id" : 3,
+        "icon": "https://t3.ftcdn.net/jpg/05/71/70/44/240_F_571704455_dbR0s6N8gqkTH5G7y49rYE07RHi7NFws.jpg",
+        "name": "Marketing & Sales ",
+        "abailable": "200 Jobs Available"
+    },
+    {
+        "id": 4,
+        "icon": "https://t4.ftcdn.net/jpg/05/64/25/63/240_F_564256380_2mo5rrtwUAbImWDFhh2xtqQkEyzcTWNp.jpg",
+        "name": "Web developer",
+        "abailable": "230+ Jobs Available"
+    }
+]

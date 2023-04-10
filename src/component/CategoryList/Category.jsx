@@ -1,18 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import SingleCategory from '../SingleCategory/SingleCategory';
 
-const Category = ({data}) => {
-    console.log(data)
+const Category = ({ singleData }) => {
+    console.log(singleData)
     return (
         <div>
-            <h2 className='font-bold text-3xl text-center mt-10'>Job Category List</h2>
-            <p className='text-center mt-2'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-            <div className='grid md:grid-cols-3 mt-9'>
-            {
-                data.map(singleData => <SingleCategory singleData={singleData} key={singleData.id}></SingleCategory>)
-            }
+            <div className='bg-indigo-50 m-3 p-4 rounded h-46'>
+                <img className='h-12 w-12 rounded' src={singleData.icon
+                } alt="" />
+                <h1 className='font-bold text-lg'>{singleData.name}</h1>
+                <p>{singleData.abailable}</p>
             </div>
         </div>
     );
