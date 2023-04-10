@@ -13,11 +13,13 @@ import AppliedJobs from './component/AppliedJobs/AppliedJobs';
 import cartProductsLoader from './loaders/cartProductsList';
 import Statistics from './component/Statistics/Statistics';
 import NoDataFound from './component/NoDataFound/NoDataFound';
+import Blog from './component/Blog/Blog';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <NoDataFound></NoDataFound>,
     children: [
       {
         path: '/',
@@ -39,8 +41,8 @@ const router = createBrowserRouter([
         element: <Statistics></Statistics>
       },
       {
-        path: '*',
-        element: <NoDataFound></NoDataFound>
+        path: '/blog',
+        element: <Blog></Blog>
       }
     ]
   },
