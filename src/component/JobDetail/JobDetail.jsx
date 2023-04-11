@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import SingleDetail from '../SingleDetail/SingleDetail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDollarSign, faDollar } from '@fortawesome/free-solid-svg-icons'
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { faDollarSign, faCalendarAlt, faPhoneAlt, faMailBulk, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
+import { addToDb } from '../../utilities/fakedb';
 
 const JobDetail = () => {
     const [detail, setDetail] = useState({})
@@ -24,11 +24,12 @@ const JobDetail = () => {
             const find = loader ? loader.find(dt=> dt.id === id): '';
             setDetail(find)
         }
-    }, [])
-    console.log(detail)
+    }, []) 
+    // console.log(detail)
     return (
         <div className='container mx-auto grid md:grid-cols-2 mt-10 gap-10 '>
             <div >
+                <h2 className='font-bold text-2xl mb-2'>Name: {detail.name}</h2>
             <p className='mb-4'><span className="font-bold">Job Description: </span>{detail.jobDescription}</p>
             <br /><br />
             <p className='mb-4'><span className='font-bold'>job Responsibility:</span> {detail.jobResponsibility}</p>
@@ -41,14 +42,14 @@ const JobDetail = () => {
             <div className='w-96 bg-indigo-50 p-4 h-fit rounded-lg'>
                 <h2 className='font-bold text-lg mb-4 '>Job Details</h2>
                 <hr  />
-                <p className='mt-3'><FontAwesomeIcon icon={faDollarSign} /> Salary: {detail.salary}</p>
-                <p></p>
+                <p className='mt-3 mb-2'><span className='text-indigo-400'><FontAwesomeIcon icon={faDollarSign} /></span> Salary: {detail.salary}</p>
+                <p className='text-indigo-400'><FontAwesomeIcon icon={faCalendarAlt} /></p>
                 <br />
                 <h2 className='font-bold text-lg mb-3'>Contact Information</h2>
                 <hr/>
-                <p className='mt-3'><span className='font-bold '>Phone:</span> {detail.phone}</p>
-                <p className='mt-2'><span className='font-bold'>Email;</span> {detail.email}</p>
-                <p className='mt-2'><span className='font-bold'>Address:</span> {detail.address}</p>
+                <p className='mt-3'><span className='text-indigo-400'><FontAwesomeIcon icon={faPhoneAlt} /></span> <span className='font-bold '>Phone:</span> {detail.phone}</p>
+                <p className='mt-2'><span className='text-indigo-400'><FontAwesomeIcon icon={faMailBulk} /></span> <span className='font-bold'>Email:</span> {detail.email}</p>
+                <p className='mt-2'><span className='text-indigo-400'><FontAwesomeIcon icon={faMapMarkerAlt} /></span> <span className='font-bold'>Address:</span> {detail.address}</p>
             </div>
             <button className='bg-indigo-400 text-white font-bold w-96 mt-6 p-2 rounded-lg' onClick={()=>handleAddToCart(detail.id)}>Apply Now</button>
             </div>
