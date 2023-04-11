@@ -81,11 +81,11 @@ const Statistics = () => {
     ]
     return (
         <div className='flex justify-center mt-12 '>
-            <RadarChart outerRadius={90} width={730} height={250} data={data}>
+            <RadarChart outerRadius={120} width={730} height={350} data={data}>
   <PolarGrid />
   <PolarAngleAxis dataKey="subject" />
   <PolarRadiusAxis angle={30} domain={[0, 65]} />
-
+        <Tooltip></Tooltip>
   <Radar name="FullMark" dataKey="fullMark" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
   <Radar name="Mark" dataKey="mark" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
   <Legend />
