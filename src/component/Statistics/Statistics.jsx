@@ -77,6 +77,11 @@ const Statistics = () => {
           "subject": "assignment-six",
           "mark": 58,
           "fullMark": 60
+        },
+        {
+          "subject": "assignment-seven",
+          "mark": 60,
+          "fullMark": 60
         }
     ]
     return (

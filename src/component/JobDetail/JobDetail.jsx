@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import SingleDetail from '../SingleDetail/SingleDetail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign, faCalendarAlt, faPhoneAlt, faMailBulk, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 import { addToDb } from '../../utilities/fakedb';
