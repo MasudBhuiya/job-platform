@@ -26,7 +26,7 @@ const JobDetail = () => {
     }, []) 
     // console.log(detail)
     return (
-        <div className='container mx-auto grid md:grid-cols-2 mt-10 gap-10 '>
+        <div className='ml-4 container mx-auto grid md:grid-cols-2 mt-10 gap-10  items-center justify-center'>
             <div >
                 <h2 className='font-bold text-2xl mb-2'>Name: {detail.name}</h2>
             <p className='mb-4'><span className="font-bold">Job Description: </span>{detail.jobDescription}</p>

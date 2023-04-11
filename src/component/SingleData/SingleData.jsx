@@ -9,7 +9,7 @@ const SingleData = ({ singleData}) => {
     const { CompanyName, companyLogo, name, salary, location, type, id
     } = singleData
     return (
-        <div className='border-2 p-4 rounded-md'>
+        <div className='border-2 p-4 rounded-md '>
             <img className='h-12 w-32' src={companyLogo} alt="" />
             <h2 className='font-bold text-lg'>{CompanyName}</h2>
             <h4>{name}</h4>

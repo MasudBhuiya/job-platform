@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='container mx-auto mt-12'>
+        <div className='container mx-auto mt-12 ml-3 mr-3'>
             <p>1. When should you use context API?</p>
             <h1>Ans: Context is generally used when some data need to be accessible by many components at different nesting pages. It applys sparingly bacause it makes component reuse more difficult. If we only want to aboid pass some props though many different lavels page, component component composition is often a simple solution than context.</h1>
             <br />
