@@ -14,3 +14,6 @@
 
 ...Blog
     In this page answered the 4 questions. 
+
+...Live Link:
+        https://jocular-faloodeh-c6999c.netlify.app
