@@ -9,7 +9,7 @@
 ...Statistics
     In this page, there is a radar chart. The chart is decleared by assignment marks.
 
-...Applied Jobs
+ * * * Applied Jobs
     In this page, all applied jobs are showed. In the top, two button point out. those are remote and onside. when the remote button is clicked, All remote jobs are showed. and when ther onsede button is clicked, all onside jobs are showed. And all the applied jobs has a view details button. when the button is clicked, then it go details page. 
 
 ...Blog
@@ -17,3 +17,4 @@
 
 ...Live Link:
         https://jocular-faloodeh-c6999c.netlify.app
+# assignment-9
